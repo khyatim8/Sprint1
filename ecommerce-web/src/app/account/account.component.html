@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let product of products">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/{{product.productImage}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Product Name: {{product.productName}}</h5>
+                <p class="card-text">Product Description: {{product.productDescription}}</p>
+                <p class="card-text">Product Rate: ₹ {{product.productMrp}}</p>
+                <p class="card-text">Product Discount: {{product.productDiscount}}</p>
+                <p class="card-text">Product Final Rate: {{product.productFinal}}</p>
+
+                <!-- <a class="nav-link" routerLink="/cart">BUY</a> -->
+                <a routerLink="/cart" class="btn btn-primary" style="margin-right: 20px;"
+                    (click)="addtocart(product)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
